@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    >nav{
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >button {
+            margin-right: 4rem;
+            
+            >span {
+                transition: color 0.4s ease;
+                font-size: 2rem;
+                color: $grey;
+
+            }
+
+            &:hover, &.active {
+                >span {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}
