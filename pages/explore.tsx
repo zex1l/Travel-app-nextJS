@@ -2,7 +2,9 @@ import Layout from "../app/common/Layout";
 
 const Explore = () => {
     return (
-        <Layout>Explrore</Layout>
+        <Layout>
+            <div>Explore</div>
+        </Layout>
     );
 };
 

@@ -1,10 +1,15 @@
 import Footer from './footer/Footer'
+import { FC } from 'react';
 
-const Layout = (props) => {
+interface IProps {
+    children : JSX.Element
+}
+
+const Layout: FC <IProps> = ({children}) => {
     return (
         <>
             <div>
-                {props.children}
+                {children}
             </div>
             <Footer/>
         </>

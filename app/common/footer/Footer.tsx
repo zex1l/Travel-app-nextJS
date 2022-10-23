@@ -1,7 +1,12 @@
 import styles from './Footer.module.scss'
 import {useRouter} from 'next/router'
 
-const navItems = [
+type TypeNavItems = {
+    link : string
+    icon : string
+}
+
+const navItems : TypeNavItems[] = [
     {
         link: '/',
         icon: 'home'
@@ -15,15 +20,16 @@ const navItems = [
         icon: 'place'
     },
     {
-        link: '/person',
+        link: '/profile',
         icon: 'person'
     },
 ]
 
 const Footer = () => {
 
-    const {push, pathname} = useRouter()
+    const {push, pathname, query: {slug}} = useRouter()
 
+    
     return (
         <footer className={styles.footer}>
             <nav>
