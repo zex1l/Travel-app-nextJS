@@ -1,8 +1,9 @@
 import { GetStaticProps, NextPage } from 'next'
-import Footer from '../app/common/footer/Footer'
 import Layout from '../app/common/Layout'
+import SearchSection from '../app/components/Home/SearchSection/SearchSection'
 import { IPlace } from '../app/types/place'
-import styles from '../styles/Home.module.css'
+import mapImg from '../assets/img/map.png'
+
 
 interface IHome {
   places : IPlace[]
@@ -10,10 +11,11 @@ interface IHome {
 
 const Home : NextPage <IHome> = ({places}) => {
   return (
-      <Layout>
-        <>
-          {places.map(place => place.location)}
-        </>
+      <Layout >
+        <div style={{ width: '80%', margin: '0 auto' }}>
+          <SearchSection/>
+        </div>
+
       </Layout>
   )
 }
